@@ -1,0 +1,29 @@
+Source: libgooglepinyin
+Priority: optional
+Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Uploaders: Aron Xu <aron@debian.org>
+Build-Depends: debhelper (>= 7.0.50~), cmake
+Standards-Version: 3.9.2
+Section: libs
+Homepage: http://code.google.com/p/libgooglepinyin
+Vcs-Git: git://git.debian.org/pkg-ime/libgooglepinyin.git
+Vcs-Browser: http://git.debian.org/?p=pkg-ime/libgooglepinyin.git
+
+Package: libgooglepinyin-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libgooglepinyin0 (= ${binary:Version})
+Description: Pinyin engine fork from Google Pinyin on Android - development files
+ libgooglepinyin is a fork of Google Pinyin on Android, it features
+ to have excellent input experience and uses little resource.
+ .
+ This package provides the library development files.
+
+Package: libgooglepinyin0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Pinyin engine fork from Google Pinyin on Android
+ libgooglepinyin is a fork of Google Pinyin on Android, it features
+ to have excellent input experience and uses little resource.
+ .
+ This package provides the library file.

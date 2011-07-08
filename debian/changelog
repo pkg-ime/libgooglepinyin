@@ -1,0 +1,5 @@
+libgooglepinyin (0.0+hg003-1) UNRELEASED; urgency=low
+
+  * Initial release (Closes: #633106)
+
+ -- Aron Xu <happyaron.xu@gmail.com>  Fri, 08 Jul 2011 23:36:05 +0800

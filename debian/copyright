@@ -1,0 +1,24 @@
+This work was packaged for Debian by:
+
+    Aron Xu <aron@debian.org> on Fri, 08 Jul 2011 23:36:05 +0800
+
+It was downloaded from:
+
+    http://code.google.com/p/libgooglepinyin
+
+Upstream Author:
+
+    Weng Xuetian <wengxt@gmail.com>
+
+Copyright:
+
+    Copyright (C) 2011 Weng Xuetian
+
+License: Apache License 2.0
+see "/usr/share/common-licenses/Apache-2.0"
+
+The Debian packaging is:
+
+    Copyright (C) 2011 Aron Xu <aron@debian.org>
+
+and is licensed under Apache License 2.0
