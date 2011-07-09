@@ -1,6 +1,8 @@
 project(googlepinyin)
 cmake_minimum_required(VERSION 2.6)
 
+option(ENABLE_STATIC "Build static library" True)
+
 # uninstall target
 configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in"
