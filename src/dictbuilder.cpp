@@ -496,7 +496,7 @@ size_t DictBuilder::read_raw_dict(const char* fn_raw,
   delete [] valid_hzs;
   utf16_reader.close();
 
-  printf("read succesfully, lemma num: %zd\n", lemma_num);
+  printf("read successfully, lemma num: %zd\n", lemma_num);
 
   return lemma_num;
 }

@@ -7,4 +7,4 @@ Name: googlepinyin
 Description: Google Pinyin library (Fork from android)
 Version: 1.0
 Cflags: -I${includedir}
-Libs: -L${libdir}
+Libs: -L${libdir} -lgooglepinyin
