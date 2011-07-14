@@ -29,7 +29,7 @@ Description: Pinyin engine fork from Google Pinyin on Android
  This package provides the library file.
 
 Package: python-googlepinyin
-Architecture: any
+Architecture: all
 Section: python
 Depends: ${python:Depends}, ${misc:Depends}
 Description: Pinyin engine fork from Google Pinyin on Android
