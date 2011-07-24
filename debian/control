@@ -31,7 +31,7 @@ Description: Pinyin engine fork from Google Pinyin on Android
 Package: python-googlepinyin
 Architecture: all
 Section: python
-Depends: ${python:Depends}, ${misc:Depends}
+Depends: ${python:Depends}, ${python:Versions}, ${python:Provides}, ${misc:Depends}
 Description: Pinyin engine fork from Google Pinyin on Android - Python wrapper
  libgooglepinyin is a fork of Google Pinyin on Android, it features
  to have excellent input experience and uses little resource.
