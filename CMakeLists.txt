@@ -2,12 +2,15 @@ project(googlepinyin)
 cmake_minimum_required(VERSION 2.6)
 
 option(ENABLE_STATIC "Build static library" False)
+option(ENABLE_PYTHON2 "Install python wrapper" True)
 
 # uninstall target
 configure_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
     IMMEDIATE @ONLY)
+
+SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
 
 add_custom_target(uninstall
     COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
@@ -32,3 +35,4 @@ add_subdirectory(src)
 add_subdirectory(tools)
 add_subdirectory(include)
 add_subdirectory(data)
+add_subdirectory(wrapper)

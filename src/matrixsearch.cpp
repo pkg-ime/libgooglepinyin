@@ -669,7 +669,9 @@ bool MatrixSearch::add_lma_to_userdict(uint16 lma_fr, uint16 lma_to,
 
     uint16 tmp = get_lemma_str(lma_id, word_str + spl_id_fr,
                                kMaxLemmaSize + 1 - spl_id_fr);
-    assert(tmp == lma_len);
+    if (tmp != lma_len) {
+      return false;
+    }
 
     tmp = get_lemma_splids(lma_id, spl_ids + spl_id_fr, lma_len, true);
     if (tmp != lma_len) {

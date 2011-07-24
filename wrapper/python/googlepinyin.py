@@ -6,11 +6,12 @@
 '''
 
 import ctypes
+import ctypes.util
 import os
 import sys
 
 libc = ctypes.CDLL("libc.so.6")
-ime_pinyin = ctypes.CDLL('libgooglepinyin.so')
+ime_pinyin = ctypes.CDLL(ctypes.util.find_library('googlepinyin'), use_errno=True)
 
 FN_SYS_DICT = '/usr/share/googlepinyin/dict_pinyin.dat'
 FN_USR_DICT = os.path.expanduser('~/.config/ibus/googlepinyin/userdict_pinyin.dat')

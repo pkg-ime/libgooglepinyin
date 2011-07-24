@@ -1,0 +1,5 @@
+
+FIND_PACKAGE(PythonLibrary REQUIRED)
+INCLUDE(PythonMacros)
+
+PYTHON_INSTALL(googlepinyin.py ${PYTHON_SITE_PACKAGES_INSTALL_DIR})
