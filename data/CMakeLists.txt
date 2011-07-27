@@ -4,6 +4,6 @@ add_custom_command(OUTPUT dict_pinyin.dat
 
 add_custom_target(datafile ALL DEPENDS dict_pinyin.dat)
 
-configure_file(googlepinyin.pc.in googlepinyin.pc)
+configure_file(googlepinyin.pc.in ${CMAKE_CURRENT_BINARY_DIR}/googlepinyin.pc)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/dict_pinyin.dat DESTINATION ${datadir}/googlepinyin)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/googlepinyin.pc DESTINATION ${libdir}/pkgconfig)
