@@ -1,5 +1,5 @@
-libgooglepinyin (0.0+hg072401-1) UNRELEASED; urgency=low
+libgooglepinyin (0.1.0-1) unstable; urgency=low
 
   * Initial release (Closes: #633106)
 
- -- Aron Xu <happyaron.xu@gmail.com>  Fri, 08 Jul 2011 23:36:05 +0800
+ -- Aron Xu <aron@debian.org>  Mon, 05 Sep 2011 17:53:28 +0800

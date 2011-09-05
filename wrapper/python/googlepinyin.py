@@ -157,7 +157,6 @@ def im_get_sps_str(decoded_len):
     '''
     return ime_pinyin.im_get_sps_str(decoded_len)
 
-_cand_str = ctypes.c_buffer(256)
 
 def im_get_candidate(cand_id, max_len=1024):
     '''Get a candidate(or choice) string.
@@ -176,9 +175,10 @@ def im_get_candidate(cand_id, max_len=1024):
     char16* im_get_candidate(size_t cand_id, char16* cand_str,
                              size_t max_len);
     '''
-    candidate = ime_pinyin.im_get_candidate(cand_id, _cand_str, max_len)
+    cand_str = ctypes.c_buffer(256)
+    candidate = ime_pinyin.im_get_candidate(cand_id, cand_str, max_len)
     # ret = ctypes.c_char_p(candidate).value.decode('utf16').encode('utf8')
-    return _cand_str.value.decode('utf16').encode('utf8')
+    return cand_str.raw.decode('utf16').encode('utf8').replace('\x00', '')
 
 _spl_start = ctypes.c_uint16()
 
@@ -201,6 +201,8 @@ def im_get_spl_start_pos():
     num = ime_pinyin.im_get_spl_start_pos(_spl_start)
     return _spl_start.value
     
+_cand_id = ctypes.c_size_t()
+
 def im_choose(cand_id):
     '''Choose a candidate and make it fixed
 
@@ -219,7 +221,8 @@ def im_choose(cand_id):
      */
     size_t im_choose(size_t cand_id);
     '''
-    return ime_pinyin.im_choose(cand_id)
+    _cand_id.value = cand_id
+    return ime_pinyin.im_choose(_cand_id)
 
 def im_cancel_last_choice():
     '''Cancel the last selection
