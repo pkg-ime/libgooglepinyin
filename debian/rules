@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-DEB_CONFIGURE_EXTRA_FLAGS += --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
+DEB_CONFIGURE_EXTRA_FLAGS += -DLIB_INSTALL_DIR=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 LDFLAGS+=-Wl,--as-needed
 %:
 	dh $@
