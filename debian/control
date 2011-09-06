@@ -1,7 +1,9 @@
 Source: libgooglepinyin
 Priority: optional
 Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
-Uploaders: Aron Xu <aron@debian.org>, Eleanor Chen <chenyueg@gmail.com>
+Uploaders: Aron Xu <aron@debian.org>, Eleanor Chen <chenyueg@gmail.com>, 
+  YunQiang Su <wzssyqa@gmail.com>
+DM-Upload-Allowed: yes
 Build-Depends: debhelper (>= 8), cmake
 Standards-Version: 3.9.2
 Section: libs
@@ -33,8 +35,9 @@ Description: Pinyin engine fork from Google Pinyin on Android
 
 Package: libgooglepinyin0-dbg
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Pinyin engine fork from Google Pinyin on Android
+Depends: ${shlibs:Depends}, ${misc:Depends}, 
+  libgooglepinyin0 (= ${binary:Version}) 
+Description: Pinyin engine fork from Google Pinyin on Android - debug symbols
  libgooglepinyin is a fork of Google Pinyin on Android, it features
  to have excellent input experience and uses little resource.
  .
