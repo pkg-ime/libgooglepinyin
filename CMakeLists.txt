@@ -2,8 +2,6 @@ project(googlepinyin)
 cmake_minimum_required(VERSION 2.6)
 
 option(ENABLE_STATIC "Build static library" False)
-option(ENABLE_PYTHON2 "Install python wrapper" True)
-option(ENABLE_IBUS "Install ibus wrapper" True)
 
 # uninstall target
 configure_file(
@@ -27,13 +25,10 @@ set(libdir ${LIB_INSTALL_DIR})
 set(datadir ${CMAKE_INSTALL_PREFIX}/share)
 set(localedir ${CMAKE_INSTALL_PREFIX}/share/locale)
 set(includedir  ${CMAKE_INSTALL_PREFIX}/include/googlepinyin)
-set(CMAKE_C_FLAGS "-Wall")
-set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--no-undefined")
-
-set(libdir ${LIB_INSTALL_DIR})
+set(CMAKE_C_FLAGS "-Wall ${CMAKE_C_FLAGS}")
+set(CMAKE_SHARED_LINKER_FLAGS "-Wl,--no-undefined ${CMAKE_SHARED_LINKER_FLAG}")
 
 add_subdirectory(src)
 add_subdirectory(tools)
 add_subdirectory(include)
 add_subdirectory(data)
-add_subdirectory(wrapper)

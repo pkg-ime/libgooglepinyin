@@ -2,17 +2,19 @@ Source: libgooglepinyin
 Priority: optional
 Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
 Uploaders: Aron Xu <aron@debian.org>, Eleanor Chen <chenyueg@gmail.com>
-Build-Depends: debhelper (>= 7.0.50~), cmake, python-all-dev (>= 2.6.6-3~)
+Build-Depends: debhelper (>= 8), cmake
 Standards-Version: 3.9.2
 Section: libs
 Homepage: http://code.google.com/p/libgooglepinyin
 Vcs-Git: git://git.debian.org/pkg-ime/libgooglepinyin.git
 Vcs-Browser: http://git.debian.org/?p=pkg-ime/libgooglepinyin.git
 
-Package: libgooglepinyin-dev
+Package: libgooglepinyin0-dev
 Section: libdevel
 Architecture: any
 Depends: ${misc:Depends}, libgooglepinyin0 (= ${binary:Version})
+Provides: libgooglepinyin-dev
+Conflicts: libgooglepinyin-dev
 Description: Pinyin engine fork from Google Pinyin on Android - development files
  libgooglepinyin is a fork of Google Pinyin on Android, it features
  to have excellent input experience and uses little resource.
@@ -22,19 +24,18 @@ Description: Pinyin engine fork from Google Pinyin on Android - development file
 Package: libgooglepinyin0
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: libgooglepinyin
 Description: Pinyin engine fork from Google Pinyin on Android
  libgooglepinyin is a fork of Google Pinyin on Android, it features
  to have excellent input experience and uses little resource.
  .
  This package provides the library file.
 
-Package: python-googlepinyin
-Architecture: all
-Section: python
-Provides: ${python:Provides}
-Depends: ${python:Depends}, ${misc:Depends}
-Description: Pinyin engine fork from Google Pinyin on Android - Python wrapper
+Package: libgooglepinyin0-dbg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Pinyin engine fork from Google Pinyin on Android
  libgooglepinyin is a fork of Google Pinyin on Android, it features
  to have excellent input experience and uses little resource.
  .
- This package provides the Python wrapper.
+ This package provides the library debug symbols.

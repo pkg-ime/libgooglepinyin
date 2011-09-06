@@ -454,7 +454,7 @@ size_t MatrixSearch::search(const char *py, size_t py_len) {
 
   // If there are too many spellings, remove the last letter until the spelling
   // number is acceptable.
-  while (spl_id_num_ > 9) {
+  while (spl_id_num_ > 26) {
     py_len--;
     reset_search(py_len, false, false, false);
     pys_[py_len] = '\0';
