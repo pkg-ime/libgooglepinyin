@@ -34,6 +34,7 @@ Description: Pinyin engine fork from Google Pinyin on Android
  This package provides the library file.
 
 Package: libgooglepinyin0-dbg
+Section: debug
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, 
   libgooglepinyin0 (= ${binary:Version}) 
