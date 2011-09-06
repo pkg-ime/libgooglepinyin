@@ -1,9 +1,10 @@
 #!/usr/bin/make -f
-DEB_CONFIGURE_EXTRA_FLAGS += -DLIB_INSTALL_DIR=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 LDFLAGS+=-Wl,--as-needed
+DEB_HOST_MULTIARCH?=$(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 %:
 	dh $@
 override_dh_auto_configure:
-	dh_auto_configure -- -DENABLE_STATIC=True
+	dh_auto_configure -- -DENABLE_STATIC=True -DLIB_INSTALL_DIR=\$${prefix}/lib/$(DEB_HOST_MULTIARCH)
 override_dh_strip:
 	dh_strip --dbg-package=libgooglepinyin0-dbg
