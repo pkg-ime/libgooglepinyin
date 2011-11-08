@@ -1,0 +1,17 @@
+Description: change the path of dict file
+ libgooglepinyin comes with endianess-sensitive dict files, which are
+ architecture dependent. It should be moved to
+ /usr/lib/<multiarch-triplet>/libgooglepinyin/data to comply with FHS.
+Origin: Upstream, http://code.google.com/p/libgooglepinyin/source/detail?r=25c8db98e873e0ec9cdbb52dac9b0fb02e185043
+Bug-Debian: 646958
+Last-Update: 2011-11-08
+--- a/data/CMakeLists.txt
++++ b/data/CMakeLists.txt
+@@ -5,5 +5,6 @@
+ add_custom_target(datafile ALL DEPENDS dict_pinyin.dat)
+ 
+ configure_file(googlepinyin.pc.in ${CMAKE_CURRENT_BINARY_DIR}/googlepinyin.pc)
+-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/dict_pinyin.dat DESTINATION ${datadir}/googlepinyin)
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/dict_pinyin.dat DESTINATION
++    ${libdir}/googlepinyin/data)
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/googlepinyin.pc DESTINATION ${libdir}/pkgconfig)

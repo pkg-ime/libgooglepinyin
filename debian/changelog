@@ -1,3 +1,10 @@
+libgooglepinyin (0.1.1-2) unstable; urgency=low
+
+  * debian/patches:
+    + 01-change_the_path.patch: per Policy 9.1.1 (Closes: #646958)
+
+ -- Aron Xu <aron@debian.org>  Tue, 08 Nov 2011 21:24:11 +0800
+
 libgooglepinyin (0.1.1-1) unstable; urgency=low
 
   * Initial release (Closes: #633106)
