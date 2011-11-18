@@ -1,2 +1,2 @@
 usr/lib/*/lib*.so.*
-usr/share/googlepinyin/dict_pinyin.dat
+usr/lib/*/googlepinyin/data/dict_pinyin.dat

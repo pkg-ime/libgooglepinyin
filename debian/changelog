@@ -1,7 +1,8 @@
-libgooglepinyin (0.1.1-2) unstable; urgency=low
+libgooglepinyin (0.1.1+hg20111109-1) unstable; urgency=low
 
-  * debian/patches:
-    + 01-change_the_path.patch: per Policy 9.1.1 (Closes: #646958)
+  * New upstream snapshot:
+    + Change the data's path, per Policy 9.1.1 (Closes: #646958)
+    + Add big endian support.
 
  -- Aron Xu <aron@debian.org>  Tue, 08 Nov 2011 21:24:11 +0800
 
