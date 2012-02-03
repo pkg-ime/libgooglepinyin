@@ -1,6 +1,10 @@
 #!/usr/bin/make -f
-LDFLAGS+=-Wl,--as-needed
 DEB_HOST_MULTIARCH?=$(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+DPKG_EXPORT_BUILDFLAGS = 1
+-include /usr/share/dpkg/default.mk
+CFLAGS += $(CPPFLAGS)
+CXXFLAGS += $(CPPFLAGS)
+LDFLAGS+=-Wl,--as-needed
 
 %:
 	dh $@
