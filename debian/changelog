@@ -1,0 +1,19 @@
+libgooglepinyin (0.1.2) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Aron Xu <aron@debian.org>  Fri, 03 Feb 2012 21:41:29 +0800
+
+libgooglepinyin (0.1.1+hg20111109-1) unstable; urgency=low
+
+  * New upstream snapshot:
+    + Change the data's path, per Policy 9.1.1 (Closes: #646958)
+    + Add big endian support.
+
+ -- Aron Xu <aron@debian.org>  Tue, 08 Nov 2011 21:24:11 +0800
+
+libgooglepinyin (0.1.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #633106)
+
+ -- Aron Xu <aron@debian.org>  Mon, 05 Sep 2011 17:53:28 +0800

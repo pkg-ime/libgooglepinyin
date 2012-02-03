@@ -1,0 +1,3 @@
+version=3
+http://code.google.com/p/libgooglepinyin/downloads/list \
+  http://libgooglepinyin.googlecode.com/files/libgooglepinyin-(.*).tar.gz
